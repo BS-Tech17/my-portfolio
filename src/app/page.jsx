@@ -8,7 +8,7 @@ export default function Home() {
           Bhoomika Saxena
         </h1>
 
-        <p className="text-xl text-gray-400 mt-4">
+        <p className="text-xl text-teal-400 mt-4">
           IoT Developer • AI Builder • Robotics Enthusiast
         </p>
 
