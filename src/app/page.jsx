@@ -1,56 +1,45 @@
 export default function Home() {
   return (
-    <main className="space-y-32">
+    <main className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white">
 
       {/* HERO */}
-      <section className="h-screen flex flex-col justify-center items-center text-center">
-        <h1 className="text-6xl font-bold">
+      <section className="flex flex-col items-center justify-center h-screen text-center px-6">
+        <h1 className="text-5xl md:text-7xl font-bold mb-6">
           Bhoomika Saxena
         </h1>
 
-        <p className="text-xl text-teal-400 mt-4">
-          IoT Developer • AI Builder • Robotics Enthusiast
+        <p className="text-xl text-gray-300 max-w-xl mb-8">
+          IoT Developer • AI Builder • Full Stack Engineer  
+          Building intelligent systems connecting hardware & software.
         </p>
 
-        <button className="mt-8 px-6 py-3 bg-blue-600 rounded-xl hover:scale-105 transition">
+        <a
+          href="#projects"
+          className="px-8 py-3 bg-white text-black rounded-full font-semibold hover:scale-105 transition"
+        >
           View Projects
-        </button>
-      </section>
-
-      {/* ABOUT */}
-      <section className="max-w-4xl mx-auto text-center">
-        <h2 className="text-3xl font-semibold mb-4">About Me</h2>
-
-        <p className="text-gray-400">
-          I build intelligent systems combining IoT, computer vision,
-          and machine learning — from smart locks and accident detection
-          models to real-time sensor dashboards.
-        </p>
+        </a>
       </section>
 
       {/* PROJECTS */}
-      <section className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-semibold mb-8 text-center">
-          Projects
-        </h2>
+      <section id="projects" className="px-8 md:px-20 py-20">
+        <h2 className="text-4xl font-bold mb-10">Projects</h2>
 
         <div className="grid md:grid-cols-3 gap-8">
 
-          <div className="p-6 bg-teal-800 rounded-2xl">
-            Smart Door Lock
-          </div>
+          <Card
+            title="Smart Door Lock"
+            desc="AI vision touchless entry system using MediaPipe + Arduino"
+          />
 
-          <div className="p-6 bg-slate-800 rounded-2xl">
-            Accident Detection AI
-          </div>
+          <Card
+            title="Accident Detection AI"
+            desc="Deep learning model detecting crashes from images"
+          />
 
-          <div className="p-6 bg-slate-800 rounded-2xl">
-            IoT Sensor Dashboard
-          </div>
+          <Card
+            title="IoT Sensor Dashboard"
+            desc="Realtime sensor visualization platform"
+          />
 
         </div>
-      </section>
-
-    </main>
-  )
-}
